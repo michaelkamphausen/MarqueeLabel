@@ -313,11 +313,11 @@ CGPoint MLOffsetCGPoint(CGPoint point, CGFloat offset);
         switch (self.marqueeType) {
             case MLContinuousReverse:
             case MLRightLeft:
-                labelFrame = CGRectIntegral(CGRectMake(self.trailingBuffer, 0.0f, self.bounds.size.width - (self.leadingBuffer + self.trailingBuffer), self.bounds.size.height));
+                labelFrame = CGRectIntegral(CGRectMake(0.0f, 0.0f, self.bounds.size.width - self.leadingBuffer, self.bounds.size.height));
                 break;
                 
             default:
-                labelFrame = CGRectIntegral(CGRectMake(self.leadingBuffer, 0.0f, self.bounds.size.width - (self.leadingBuffer + self.trailingBuffer), self.bounds.size.height));
+                labelFrame = CGRectIntegral(CGRectMake(self.leadingBuffer, 0.0f, self.bounds.size.width - self.leadingBuffer, self.bounds.size.height));
                 break;
         }
         
